@@ -1,0 +1,33 @@
+{
+  "name": "eslint-config-zuodashi",
+  "version": "0.0.1",
+  "description": "ESLint shareable config for the zuodashi javascript style",
+  "license": "MIT",
+  "repository": "",
+  "author": "Ma Jinping",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "zuodashi",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "jslint",
+    "eslint",
+    "code style"
+  ],
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=5.16.0"
+  }
+}
