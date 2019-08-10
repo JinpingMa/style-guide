@@ -6,10 +6,10 @@
 ## Installation
 
 ```sh
-#https
-$ npm install --save-dev git+https://address.git
-#ssh
-$ npm install --save-dev git+ssh://address.git
+#install with HTTPS
+$ npm install --save-dev git+https://git.zuodashi.com/jinping.ma/eslint-config-zuodashi.git
+#install with SSH
+$ npm install --save-dev git+git@git.zuodashi.com:jinping.ma/eslint-config-zuodashi.git
 
 ```
 
