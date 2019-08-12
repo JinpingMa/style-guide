@@ -16,7 +16,9 @@
     "customize-stylelint.js"
   ],
   "keywords": [
-    "zuodashi",
+    "style guide",
+    "stylelint",
+    "eslint",
     "quality",
     "style",
     "lint",
