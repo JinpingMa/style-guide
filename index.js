@@ -174,7 +174,7 @@ module.exports = {
     'array-element-newline': [2, 'consistent'],
     'block-spacing': [2, 'always'],
     'brace-style': [2, '1tbs'],
-    'camelcase': [2, { properties: 'always' }],
+    'camelcase': [2, { properties: 'always', "ignoreDestructuring": true }],
     // 'capitalized-comments': 0,
     'comma-dangle': [2, 'never'],
     'comma-spacing': [2, { "before": false, "after": true }],
