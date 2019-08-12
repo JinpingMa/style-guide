@@ -13,7 +13,6 @@ $ npm install --save-dev git+git@git.zuodashi.com:jinping.ma/eslint-config-zuoda
 
 ```
 
-
 ## Usage
 
 Once the `eslint-config-zuodashi` package is installed, you can use it by specifying `zuodashi` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
