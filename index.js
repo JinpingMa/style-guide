@@ -204,7 +204,6 @@ module.exports = {
           'body': 1,
           'parameters': 2,
         },
-        'MemberExpression': 2,
         'ObjectExpression': 1,
         'SwitchCase': 1,
         'ignoredNodes': [
