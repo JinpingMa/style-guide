@@ -171,7 +171,7 @@ module.exports = {
     // ----------------------------------------------
     'array-bracket-newline': 0,
     'array-bracket-spacing': [2, 'never'],
-    'array-element-newline': [2, 'consistent', { "multiline": true }],
+    'array-element-newline': [2, { "multiline": true }],
     'block-spacing': [2, 'always'],
     'brace-style': [2, '1tbs'],
     'camelcase': [2, { properties: 'always' }],
