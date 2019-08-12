@@ -12,7 +12,8 @@
     "test": "node test/test.js"
   },
   "files": [
-    "index.js"
+    "customize-eslint.js",
+    "customize-stylelint.js"
   ],
   "keywords": [
     "zuodashi",
