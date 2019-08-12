@@ -1,7 +1,7 @@
 {
-  "name": "zds-lint-stylelint",
+  "name": "style-guide",
   "version": "0.0.1",
-  "description": "stylelint shareable config for the zuodashi css style",
+  "description": "Lint shareable config for code style",
   "license": "MIT",
   "repository": "",
   "author": "Ma Jinping",
@@ -12,7 +12,8 @@
     "test": "node test/test.js"
   },
   "files": [
-    "stylelint.js"
+    "customize-eslint.js",
+    "customize-stylelint.js"
   ],
   "keywords": [
     "zuodashi",
