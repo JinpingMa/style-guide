@@ -1,4 +1,4 @@
-# style-guide
+# stylelint-config-ping
 > 代码风格指南npm包，包括ESLint、stylelint，可以继续添加其他语言的lint文件，如react、vue、tslint、scss、less等。
 此npm包灵感来源于[eslint shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html)
 
