@@ -1,7 +1,7 @@
 {
-  "name": "style-guide",
+  "name": "eslint-config-ping",
   "version": "0.0.1",
-  "description": "Lint shareable config for code style",
+  "description": "ESLint shareable config for javascript style",
   "license": "MIT",
   "repository": "",
   "author": "Ma Jinping",
@@ -12,12 +12,10 @@
     "test": "node test/test.js"
   },
   "files": [
-    "customize-eslint.js",
+    "index.js",
     "customize-stylelint.js"
   ],
   "keywords": [
-    "style guide",
-    "stylelint",
     "eslint",
     "quality",
     "style",
@@ -26,9 +24,9 @@
     "code style"
   ],
   "devDependencies": {
-    "stylelint": "^10.1.0"
+    "eslint": "^5.16.0"
   },
   "peerDependencies": {
-    "stylelint": ">=10.1.0"
+    "eslint": "^5.16.0"
   }
 }
