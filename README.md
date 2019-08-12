@@ -6,9 +6,9 @@
 
 ```sh
 #install with HTTPS
-$ npm install --save-dev git+https://github.com/JinpingMa/style-guide.git
+$ npm install --save-dev git+https://github.com/JinpingMa/style-guide.git#stylelint
 #install with SSH
-$ npm install --save-dev git+git@github.com:JinpingMa/style-guide.git
+$ npm install --save-dev git+git@github.com:JinpingMa/style-guide.git#stylelint
 
 ```
 
