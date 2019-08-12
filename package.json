@@ -1,7 +1,7 @@
 {
-  "name": "eslint-config-zuodashi",
+  "name": "style-guide",
   "version": "0.0.1",
-  "description": "ESLint shareable config for the zuodashi javascript style",
+  "description": "Lint shareable config for code style",
   "license": "MIT",
   "repository": "",
   "author": "Ma Jinping",
