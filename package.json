@@ -21,14 +21,12 @@
     "style",
     "lint",
     "linter",
-    "jslint",
-    "eslint",
     "code style"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "stylelint": "^10.1.0"
   },
   "peerDependencies": {
-    "eslint": ">=5.16.0"
+    "stylelint": ">=10.1.0"
   }
 }
