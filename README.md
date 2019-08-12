@@ -1,43 +1,110 @@
-# eslint-config-zuodashi
+# style-guide
+> 代码风格指南npm包，包括ESLint、stylelint，可以继续添加其他语言的lint文件，如react、vue、tslint、scss、less等。
+此npm包灵感来源于[eslint shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html)
 
-> ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for the zuodashi JavaScript style guide (ES2015+ version)
-
-
-## Installation
+## 安装
 
 ```sh
 #install with HTTPS
-$ npm install --save-dev git+https://git.zuodashi.com/jinping.ma/eslint-config-zuodashi.git
+$ npm install --save-dev git+https://github.com/JinpingMa/style-guide.git
 #install with SSH
-$ npm install --save-dev git+git@git.zuodashi.com:jinping.ma/eslint-config-zuodashi.git
+$ npm install --save-dev git+git@github.com:JinpingMa/style-guide.git
 
 ```
 
-## Usage
+## 使用
 
-Once the `eslint-config-zuodashi` package is installed, you can use it by specifying `zuodashi` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
+###ESLint
 
-```js
+`style-guide`包安装后，在目标项目的eslint配置文件的extends属性中加入customize-eslint，示例如下：
+
+```
 {
-  "extends": "zuodashi",
+  "extends": "style-guide/customize-eslint",
   "rules": {
     // Additional, per-project rules...
   }
 }
 ```
 
-### Using the `zuodashi` config with `eslint:recommended`
+#### 与其他的eslint包一起使用，如`eslint:recommended`
 
-To use zuodashi style in conjunction with ESLint's recommended rule set, extend them both, making sure to list `zuodashi` last:
-
-```js
+```
 {
-  "extends": ["eslint:recommended", "zuodashi"],
+  "extends": ["eslint:recommended", "style-guide/customize-eslint"],
+  "rules": {
+    // Additional, per-project rules...
+  }
+}
+```
+eslint规则的源文件在customize-eslint.js文件中，文件中包含了2019-08-12前的所有eslint规则，eslint:recommended规则在文件中已经标注。
+
+#### 建议
+
+在目标文件中加入检测和自动修复的指令
+```
+"scripts": {
+    ...
+    "lint:js": "eslint \"src/**/*.js\"",
+    "lint:js:fix": "eslint --fix \"src/**/*.js\""
+}
+```
+
+### stylelint
+
+`style-guide`包安装后，在目标项目的stylelint配置文件的extends属性中加入customize-stylelint，示例如下：
+
+```
+{
+  "extends": "style-guide/customize-stylelint",
   "rules": {
     // Additional, per-project rules...
   }
 }
 ```
 
-To see how the `zuodashi` config compares with `eslint:recommended`, refer to the source code of `index.js`, which lists every ESLint rule along with whether (and how) it is enforced by the `zuodashi` config.
+#### 与其他的stylelint包一起使用，如`stylelint-config-recommended`
 
+```
+{
+  "extends": ["stylelint-config-recommended", "style-guide/customize-stylelint"],
+  "rules": {
+    // Additional, per-project rules...
+  }
+}
+```
+stylelint规则的源文件在customize-stylelint.js文件中。
+
+#### 建议
+
+在目标文件中加入检测和自动修复的指令
+```
+"scripts": {
+    ...
+    "lint:style": "stylelint \"src/**/*.css\"",
+    "lint:style:fix": "stylelint --fix \"src/**/*.css\"",
+}
+```
+
+## 配合git hook使用，在commit和push前检查代码
+> 与lint-staged和husky一起使用示例：
+```
+"scripts": {
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint . --ext .js",
+    "lint-staged:style": "stylelint"
+  },
+"husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "pre-push": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.css": "npm run lint-staged:style",
+    "**/*.{js,js}": "npm run lint-staged:js"
+  }
+```
+
+## 开发
+如果要添加其他文件的lint规则，在本项目根目录下创建对应的js文件并编写规则，使用时在对应的extends中引入style-guide/yourconfigfile即可。
