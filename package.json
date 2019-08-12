@@ -1,5 +1,5 @@
 {
-  "name": "lint-config-zuodashi",
+  "name": "zds-lint-stylelint",
   "version": "0.0.1",
   "description": "stylelint shareable config for the zuodashi css style",
   "license": "MIT",
